@@ -8,18 +8,12 @@ var Queue = function(){
   // Implement the methods below
 
   someInstance.enqueue = function(value){
-    if (size === 0) {
-      storage[0] = value;
-    } else {
-      storage[size - 1] = value;
-    }
-
+    storage[size] = value;
     size++;
   };
 
   someInstance.dequeue = function(){
     var temp = storage[0];
-    //debugger;
 
     if (size > 0) {
       for (key in storage){
