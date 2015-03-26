@@ -16,6 +16,7 @@ var Stack = function() {
 var stackMethods = {};
 
 stackMethods.push = function(value){
+  this.collection[this.sizeStore - 1] = value;
   this.sizeStore++;
 }
 
@@ -23,6 +24,7 @@ stackMethods.pop = function(){
   if (this.sizeStore > 0) {
     this.sizeStore--;
   }
+  return this.collection[this.sizeStore - 1];
 }
 
 stackMethods.size = function(){
